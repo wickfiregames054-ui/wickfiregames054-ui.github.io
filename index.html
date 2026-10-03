@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wickfire Games</title>
+<meta name="description" content="Wickfire Games makes small games about light and dark. Our first game, Ember Horde, is coming to Google Play.">
+<link rel="icon" href="ember-horde/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Chakra+Petch:wght@400;600&display=swap">
+<style>
+  /* Layout: one narrow column on a night-dark ground; the game card is the only lit object. */
+  :root { --bg: #0d0b14; --ink: #f3ead8; --muted: #a69cba; --ember: #ff9a3c; --ember-hot: #ffd36b; --panel: #1a1626; --line: #ffffff1f;
+    --display: 'Bungee', Impact, 'Arial Black', sans-serif; --body: 'Chakra Petch', system-ui, 'Segoe UI', sans-serif; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--body);
+    background-image: radial-gradient(#2c2440 1px, transparent 1px); background-size: 40px 40px; }
+  main { max-width: 680px; margin: 0 auto; padding-block: 64px 48px; padding-inline: 16px; display: grid; gap: 40px; }
+  h1, h2 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1.1; text-wrap: balance; }
+  h1 { font-size: clamp(36px, 9vw, 56px); color: var(--ember); text-shadow: 0 0 32px #ff9a3c55; }
+  .lead { margin: 12px 0 0; color: var(--muted); font-size: 19px; }
+  .game { display: grid; grid-template-columns: 112px 1fr; gap: 20px; align-items: center; background: var(--panel);
+    border: 1px solid var(--line); border-radius: 14px; padding: 20px; box-shadow: 0 0 60px #ff9a3c1a; }
+  .game img { width: 112px; height: 112px; border-radius: 22px; display: block; }
+  .game > div { min-width: 0; }
+  .game h2 { font-size: 26px; color: var(--ember-hot); }
+  .game p { margin: 6px 0 12px; }
+  .status { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--bg); background: var(--ember); border-radius: 999px; padding: 3px 12px; }
+  footer { display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); padding-top: 20px; }
+  a { color: var(--ember-hot); }
+  @media (max-width: 480px) { .game { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Wickfire Games</h1>
+    <p class="lead">Small games about light and dark, made in Australia.</p>
+  </header>
+
+  <section class="game" aria-labelledby="eh">
+    <img src="ember-horde/icon.png" alt="Ember Horde icon: a glowing lantern surrounded by creatures">
+    <div>
+      <h2 id="eh">Ember Horde</h2>
+      <p>Carry the last lantern until dawn against endless swarms. Every hit shrinks your light.</p>
+      <span class="status">Coming soon to Google Play</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>Contact: <a href="mailto:wickfiregames054@gmail.com">wickfiregames054@gmail.com</a></span>
+    <a href="ember-horde/privacy/">Ember Horde privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
